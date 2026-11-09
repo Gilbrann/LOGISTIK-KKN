@@ -1,0 +1,564 @@
+{
+  "kelompok": [
+    {
+      "id": "K001",
+      "kategori": "Masak dan makan",
+      "nama": "Rice cooker",
+      "keterangan": ""
+    },
+    {
+      "id": "K002",
+      "kategori": "Masak dan makan",
+      "nama": "Kompor gas",
+      "keterangan": ""
+    },
+    {
+      "id": "K003",
+      "kategori": "Masak dan makan",
+      "nama": "Tabung gas",
+      "keterangan": ""
+    },
+    {
+      "id": "K004",
+      "kategori": "Masak dan makan",
+      "nama": "Wajan & panci (2)",
+      "keterangan": ""
+    },
+    {
+      "id": "K005",
+      "kategori": "Masak dan makan",
+      "nama": "Spatula & sendok sayur (2?)",
+      "keterangan": ""
+    },
+    {
+      "id": "K006",
+      "kategori": "Masak dan makan",
+      "nama": "Pisau dapur & talenan",
+      "keterangan": ""
+    },
+    {
+      "id": "K007",
+      "kategori": "Masak dan makan",
+      "nama": "Piring",
+      "keterangan": ""
+    },
+    {
+      "id": "K008",
+      "kategori": "Masak dan makan",
+      "nama": "Sendok & garpu",
+      "keterangan": ""
+    },
+    {
+      "id": "K009",
+      "kategori": "Masak dan makan",
+      "nama": "Tempat bumbu",
+      "keterangan": ""
+    },
+    {
+      "id": "K010",
+      "kategori": "Masak dan makan",
+      "nama": "Teko air",
+      "keterangan": ""
+    },
+    {
+      "id": "K011",
+      "kategori": "Masak dan makan",
+      "nama": "Thermos besar",
+      "keterangan": ""
+    },
+    {
+      "id": "K012",
+      "kategori": "Masak dan makan",
+      "nama": "Korek api",
+      "keterangan": ""
+    },
+    {
+      "id": "K013",
+      "kategori": "Masak dan makan",
+      "nama": "Serbet/kain lap",
+      "keterangan": ""
+    },
+    {
+      "id": "K014",
+      "kategori": "Kebersihan",
+      "nama": "Sapu lidi & sapu ijuk",
+      "keterangan": ""
+    },
+    {
+      "id": "K015",
+      "kategori": "Kebersihan",
+      "nama": "Kemoceng",
+      "keterangan": ""
+    },
+    {
+      "id": "K016",
+      "kategori": "Kebersihan",
+      "nama": "Pel & ember",
+      "keterangan": ""
+    },
+    {
+      "id": "K017",
+      "kategori": "Kebersihan",
+      "nama": "Sabun cuci piring",
+      "keterangan": ""
+    },
+    {
+      "id": "K018",
+      "kategori": "Kebersihan",
+      "nama": "Spons cuci piring",
+      "keterangan": ""
+    },
+    {
+      "id": "K019",
+      "kategori": "Kebersihan",
+      "nama": "Sabun cuci baju",
+      "keterangan": ""
+    },
+    {
+      "id": "K020",
+      "kategori": "Kebersihan",
+      "nama": "Pewangi ruangan",
+      "keterangan": ""
+    },
+    {
+      "id": "K021",
+      "kategori": "Kebersihan",
+      "nama": "Trashbag besar",
+      "keterangan": ""
+    },
+    {
+      "id": "K022",
+      "kategori": "Kebersihan",
+      "nama": "Tempat sampah",
+      "keterangan": ""
+    },
+    {
+      "id": "K023",
+      "kategori": "Kebersihan",
+      "nama": "Deterjen & pelembut",
+      "keterangan": ""
+    },
+    {
+      "id": "K024",
+      "kategori": "Kebersihan",
+      "nama": "Sikat WC/kamar mandi",
+      "keterangan": ""
+    },
+    {
+      "id": "K025",
+      "kategori": "Kebersihan",
+      "nama": "Sabun WC",
+      "keterangan": ""
+    },
+    {
+      "id": "K026",
+      "kategori": "Kebersihan",
+      "nama": "Gantungan jemuran",
+      "keterangan": ""
+    },
+    {
+      "id": "K027",
+      "kategori": "Kebersihan",
+      "nama": "Tali jemuran",
+      "keterangan": ""
+    },
+    {
+      "id": "K028",
+      "kategori": "Tidur bersama",
+      "nama": "Kasur",
+      "keterangan": ""
+    },
+    {
+      "id": "K029",
+      "kategori": "Tidur bersama",
+      "nama": "Karpet",
+      "keterangan": ""
+    },
+    {
+      "id": "K030",
+      "kategori": "Tidur bersama",
+      "nama": "Kardus",
+      "keterangan": ""
+    },
+    {
+      "id": "K031",
+      "kategori": "Darurat dan perbaikan",
+      "nama": "Tool kit sederhana (palu, obeng, kunci inggris)",
+      "keterangan": ""
+    },
+    {
+      "id": "K032",
+      "kategori": "Darurat dan perbaikan",
+      "nama": "Selotip, lakban, isolasi",
+      "keterangan": ""
+    },
+    {
+      "id": "K033",
+      "kategori": "Darurat dan perbaikan",
+      "nama": "Tali tambang",
+      "keterangan": ""
+    },
+    {
+      "id": "K034",
+      "kategori": "Kebutuhan logistik",
+      "nama": "Air mineral galon",
+      "keterangan": ""
+    },
+    {
+      "id": "K035",
+      "kategori": "Kebutuhan logistik",
+      "nama": "Mie instan (stok awal) (2)",
+      "keterangan": ""
+    },
+    {
+      "id": "K036",
+      "kategori": "Kebutuhan logistik",
+      "nama": "Bahan makanan pokok(Beras)",
+      "keterangan": ""
+    },
+    {
+      "id": "K037",
+      "kategori": "Kebutuhan logistik",
+      "nama": "Minyak goreng",
+      "keterangan": ""
+    },
+    {
+      "id": "K038",
+      "kategori": "Kebutuhan logistik",
+      "nama": "Gula, garam, merica",
+      "keterangan": ""
+    },
+    {
+      "id": "K039",
+      "kategori": "Kebutuhan logistik",
+      "nama": "Bumbu dasar",
+      "keterangan": ""
+    },
+    {
+      "id": "K040",
+      "kategori": "Kebutuhan logistik",
+      "nama": "Kopi, susu, teh",
+      "keterangan": ""
+    },
+    {
+      "id": "K041",
+      "kategori": "Elektronik bersama",
+      "nama": "Setrika",
+      "keterangan": ""
+    },
+    {
+      "id": "K042",
+      "kategori": "Elektronik bersama",
+      "nama": "kipas angin",
+      "keterangan": ""
+    },
+    {
+      "id": "K043",
+      "kategori": "Elektronik bersama",
+      "nama": "wifi",
+      "keterangan": ""
+    },
+    {
+      "id": "K044",
+      "kategori": "Elektronik bersama",
+      "nama": "Emergency lamp (bagi yang punya)",
+      "keterangan": ""
+    },
+    {
+      "id": "K045",
+      "kategori": "Elektronik bersama",
+      "nama": "pompa galon (bawa 2)",
+      "keterangan": ""
+    },
+    {
+      "id": "K046",
+      "kategori": "Kebersihan",
+      "nama": "Vixal pembersih kamar mandi",
+      "keterangan": "Ditambahkan dari catatan pada sheet sumber."
+    }
+  ],
+  "pribadi": [
+    {
+      "id": "P001",
+      "kategori": "Perlengkapan mandi",
+      "nama": "Handuk",
+      "keterangan": "Wajib"
+    },
+    {
+      "id": "P002",
+      "kategori": "Perlengkapan mandi",
+      "nama": "Sabun mandi & shampoo",
+      "keterangan": ""
+    },
+    {
+      "id": "P003",
+      "kategori": "Perlengkapan mandi",
+      "nama": "Sikat & pasta gigi",
+      "keterangan": ""
+    },
+    {
+      "id": "P004",
+      "kategori": "Perlengkapan mandi",
+      "nama": "Lotion tubuh",
+      "keterangan": ""
+    },
+    {
+      "id": "P005",
+      "kategori": "Perlengkapan mandi",
+      "nama": "DEODORANT",
+      "keterangan": "WAJIBBB"
+    },
+    {
+      "id": "P006",
+      "kategori": "Perlengkapan mandi",
+      "nama": "Sisir & alat rias sederhana",
+      "keterangan": ""
+    },
+    {
+      "id": "P007",
+      "kategori": "Perlengkapan mandi",
+      "nama": "Cermin kecil",
+      "keterangan": ""
+    },
+    {
+      "id": "P008",
+      "kategori": "Perlengkapan mandi",
+      "nama": "Gunting kuku",
+      "keterangan": ""
+    },
+    {
+      "id": "P009",
+      "kategori": "Perlengkapan mandi",
+      "nama": "Cotton bud",
+      "keterangan": ""
+    },
+    {
+      "id": "P010",
+      "kategori": "Perlengkapan mandi",
+      "nama": "Kapas pembersih",
+      "keterangan": ""
+    },
+    {
+      "id": "P011",
+      "kategori": "Perlengkapan mandi",
+      "nama": "Tisu basah & kering",
+      "keterangan": ""
+    },
+    {
+      "id": "P012",
+      "kategori": "Perlengkapan mandi",
+      "nama": "Razor (cukuran)",
+      "keterangan": "Opsional"
+    },
+    {
+      "id": "P013",
+      "kategori": "Pakaian",
+      "nama": "Kaos (minimal 7-10 buah)",
+      "keterangan": ""
+    },
+    {
+      "id": "P014",
+      "kategori": "Pakaian",
+      "nama": "Celana panjang (jeans/chino)",
+      "keterangan": ""
+    },
+    {
+      "id": "P015",
+      "kategori": "Pakaian",
+      "nama": "Celana pendek",
+      "keterangan": ""
+    },
+    {
+      "id": "P016",
+      "kategori": "Pakaian",
+      "nama": "Baju tidur",
+      "keterangan": ""
+    },
+    {
+      "id": "P017",
+      "kategori": "Pakaian",
+      "nama": "Pakaian dalam (7-10 pasang)",
+      "keterangan": ""
+    },
+    {
+      "id": "P018",
+      "kategori": "Pakaian",
+      "nama": "Kaos kaki (2pasang)",
+      "keterangan": ""
+    },
+    {
+      "id": "P019",
+      "kategori": "Pakaian",
+      "nama": "Jaket/sweater",
+      "keterangan": ""
+    },
+    {
+      "id": "P020",
+      "kategori": "Pakaian",
+      "nama": "Jas hujan/payung",
+      "keterangan": ""
+    },
+    {
+      "id": "P021",
+      "kategori": "Pakaian",
+      "nama": "Topi/kupluk",
+      "keterangan": ""
+    },
+    {
+      "id": "P022",
+      "kategori": "Pakaian",
+      "nama": "Sepatu",
+      "keterangan": ""
+    },
+    {
+      "id": "P023",
+      "kategori": "Pakaian",
+      "nama": "Sandal gunung/sandal jepit",
+      "keterangan": ""
+    },
+    {
+      "id": "P024",
+      "kategori": "Pakaian",
+      "nama": "Ikat pinggang",
+      "keterangan": ""
+    },
+    {
+      "id": "P025",
+      "kategori": "Pakaian",
+      "nama": "Sarung tangan",
+      "keterangan": ""
+    },
+    {
+      "id": "P026",
+      "kategori": "Pakaian",
+      "nama": "Masker cadangan",
+      "keterangan": ""
+    },
+    {
+      "id": "P027",
+      "kategori": "Pakaian",
+      "nama": "Hanger",
+      "keterangan": ""
+    },
+    {
+      "id": "P028",
+      "kategori": "Obat-obatan",
+      "nama": "Obat pribadi rutin",
+      "keterangan": ""
+    },
+    {
+      "id": "P029",
+      "kategori": "Obat-obatan",
+      "nama": "Obat sakit kepala/demam",
+      "keterangan": ""
+    },
+    {
+      "id": "P030",
+      "kategori": "Obat-obatan",
+      "nama": "Obat maag",
+      "keterangan": ""
+    },
+    {
+      "id": "P031",
+      "kategori": "Obat-obatan",
+      "nama": "Obat alergi",
+      "keterangan": ""
+    },
+    {
+      "id": "P032",
+      "kategori": "Obat-obatan",
+      "nama": "Obat diare",
+      "keterangan": ""
+    },
+    {
+      "id": "P033",
+      "kategori": "Obat-obatan",
+      "nama": "Obat flu & batuk",
+      "keterangan": ""
+    },
+    {
+      "id": "P034",
+      "kategori": "Obat-obatan",
+      "nama": "Vitamin (C, dll)",
+      "keterangan": ""
+    },
+    {
+      "id": "P035",
+      "kategori": "Obat-obatan",
+      "nama": "Minyak kayu putih/balsem",
+      "keterangan": ""
+    },
+    {
+      "id": "P036",
+      "kategori": "Obat-obatan",
+      "nama": "Lotion anti nyamuk",
+      "keterangan": ""
+    },
+    {
+      "id": "P037",
+      "kategori": "Obat-obatan",
+      "nama": "Sunblock SPF tinggi",
+      "keterangan": ""
+    },
+    {
+      "id": "P038",
+      "kategori": "Obat-obatan",
+      "nama": "Plester & antiseptik",
+      "keterangan": ""
+    },
+    {
+      "id": "P039",
+      "kategori": "Obat-obatan",
+      "nama": "Freshcare",
+      "keterangan": ""
+    },
+    {
+      "id": "P040",
+      "kategori": "Perlengkapan tidur",
+      "nama": "Bantal",
+      "keterangan": ""
+    },
+    {
+      "id": "P041",
+      "kategori": "Perlengkapan tidur",
+      "nama": "Selimut",
+      "keterangan": ""
+    },
+    {
+      "id": "P042",
+      "kategori": "Perlengkapan tidur",
+      "nama": "Kasur",
+      "keterangan": ""
+    },
+    {
+      "id": "P043",
+      "kategori": "Elektronik pribadi",
+      "nama": "Charger HP & power bank",
+      "keterangan": ""
+    },
+    {
+      "id": "P044",
+      "kategori": "Elektronik pribadi",
+      "nama": "Laptop & charger",
+      "keterangan": ""
+    },
+    {
+      "id": "P045",
+      "kategori": "Elektronik pribadi",
+      "nama": "Senter/headlamp",
+      "keterangan": ""
+    },
+    {
+      "id": "P046",
+      "kategori": "Elektronik pribadi",
+      "nama": "Earphone/headphone",
+      "keterangan": ""
+    },
+    {
+      "id": "P047",
+      "kategori": "Elektronik pribadi",
+      "nama": "Stop kontak multicolokan",
+      "keterangan": ""
+    }
+  ]
+}

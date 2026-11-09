@@ -38,10 +38,10 @@ export default function Home() {
             kebutuhan logistik dengan tim Perkap.
           </p>
           <a
-            href="#fitur"
+            href="/inventaris"
             className="mt-8 inline-block rounded-xl bg-[#24583c] px-6 py-3 font-semibold text-white hover:bg-[#19452e]"
           >
-            Lihat rencana fitur
+            Lihat daftar barang
           </a>
         </div>
       </section>
