@@ -105,6 +105,7 @@ export default function DashboardPage() {
               <Link href="/perkap/barang-pribadi" className="rounded-xl border border-[#cdd9ce] bg-white px-4 py-2 text-sm font-medium">Kelola daftar pribadi</Link>
               <Link href="/perkap/pengajuan" className="rounded-xl border border-[#cdd9ce] bg-white px-4 py-2 text-sm font-medium">Proses pengajuan</Link>
             </>}
+            {profile.role === "admin" && <Link href="/admin/checklist" className="rounded-xl border border-[#cdd9ce] bg-white px-4 py-2 text-sm font-medium">Pantau checklist anggota</Link>}
           </div>
           <label className="mt-8 block text-sm font-medium">Cari barang
             <input value={search} onChange={(e) => setSearch(e.target.value)} placeholder="Cari nama atau kategori" className="mt-2 w-full rounded-xl border border-[#cdd9ce] bg-white px-4 py-3" />
