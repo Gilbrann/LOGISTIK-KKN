@@ -99,6 +99,12 @@ export default function DashboardPage() {
           <p className="mt-3 text-[#58685e]">{ready} dari {items.length} barang siap dibawa. Pilihanmu tersimpan untuk akunmu.</p>
           <div className="mt-6 flex flex-wrap gap-3">
             <Link href="/inventaris" className="rounded-xl border border-[#cdd9ce] bg-white px-4 py-2 text-sm font-medium">Lihat daftar barang kelompok</Link>
+            <Link href="/pengajuan" className="rounded-xl border border-[#cdd9ce] bg-white px-4 py-2 text-sm font-medium">Ajukan barang</Link>
+            {(profile.role === "perkap" || profile.role === "admin") && <>
+              <Link href="/perkap" className="rounded-xl border border-[#cdd9ce] bg-white px-4 py-2 text-sm font-medium">Kelola barang kelompok</Link>
+              <Link href="/perkap/barang-pribadi" className="rounded-xl border border-[#cdd9ce] bg-white px-4 py-2 text-sm font-medium">Kelola daftar pribadi</Link>
+              <Link href="/perkap/pengajuan" className="rounded-xl border border-[#cdd9ce] bg-white px-4 py-2 text-sm font-medium">Proses pengajuan</Link>
+            </>}
           </div>
           <label className="mt-8 block text-sm font-medium">Cari barang
             <input value={search} onChange={(e) => setSearch(e.target.value)} placeholder="Cari nama atau kategori" className="mt-2 w-full rounded-xl border border-[#cdd9ce] bg-white px-4 py-3" />
