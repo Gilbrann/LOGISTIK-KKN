@@ -33,7 +33,7 @@ export default function LoginPage() {
   return (
     <main className="min-h-screen bg-[#f7f8f6] px-5 py-12 text-[#1d2924]">
       <div className="mx-auto max-w-md">
-        <Link href="/" className="text-sm text-[#24583c]">← Beranda</Link>
+        <p className="text-sm font-semibold text-[#24583c]">Logistik KKN</p>
         <h1 className="mt-10 text-3xl font-bold">Masuk</h1>
         <p className="mt-2 text-[#58685e]">Gunakan email dan kata sandi yang kamu daftarkan.</p>
         <form onSubmit={masuk} className="mt-7 space-y-4 rounded-2xl border border-[#dfe6df] bg-white p-6">

@@ -35,7 +35,7 @@ export default function DaftarPage() {
   return (
     <main className="min-h-screen bg-[#f7f8f6] px-5 py-12 text-[#1d2924]">
       <div className="mx-auto max-w-md">
-        <Link href="/" className="text-sm text-[#24583c]">← Beranda</Link>
+        <Link href="/login" className="text-sm text-[#24583c]">← Masuk</Link>
         <h1 className="mt-10 text-3xl font-bold">Daftar anggota KKN</h1>
         <p className="mt-2 text-[#58685e]">Buat akun dengan emailmu. Kode undangan dimasukkan setelah login.</p>
         <form onSubmit={daftar} className="mt-7 space-y-4 rounded-2xl border border-[#dfe6df] bg-white p-6">
