@@ -92,30 +92,30 @@ export default function PengajuanPerkapPage() {
   }
 
   return (
-    <main className="min-h-screen bg-[#f7f8f6] px-5 py-10 text-[#1d2924]">
+    <main className="min-h-screen bg-[#f3f7f6] px-5 py-10 text-[#09283f]">
       <div className="mx-auto max-w-4xl">
-        <Link href="/perkap" className="text-sm text-[#24583c]">← Barang kelompok</Link>
+        <Link href="/perkap" className="text-sm text-[#082b48]">← Barang kelompok</Link>
         <h1 className="mt-6 text-3xl font-bold">Pengajuan anggota</h1>
-        <p className="mt-2 text-[#58685e]">Tinjau kebutuhan anggota dan beri status serta catatan tindak lanjut.</p>
+        <p className="mt-2 text-[#4d6674]">Tinjau kebutuhan anggota dan beri status serta catatan tindak lanjut.</p>
         {loading && <p className="mt-6">Memuat pengajuan...</p>}
-        {message && <p role="status" className="mt-5 rounded-xl border border-[#dfe6df] bg-white p-4 text-sm">{message}</p>}
+        {message && <p role="status" className="mt-5 rounded-xl border border-[#d9e5e4] bg-white p-4 text-sm">{message}</p>}
         {allowed && !loading && <>
-          <p className="mt-7 text-sm text-[#58685e]">{rows.length} pengajuan</p>
+          <p className="mt-7 text-sm text-[#4d6674]">{rows.length} pengajuan</p>
           {rows.length === 0 && <p className="mt-4 rounded-xl bg-white p-6">Belum ada pengajuan anggota.</p>}
-          <div className="mt-4 space-y-4">{rows.map((row) => <article key={row.id} className="rounded-2xl border border-[#dfe6df] bg-white p-5">
-            <div className="flex flex-wrap justify-between gap-2 text-sm text-[#477558]"><span>{names[row.requester_id] || "Anggota"} · {row.request_type === "pengadaan" ? "Pengadaan" : "Peminjaman"}</span><span>{new Date(row.created_at).toLocaleString("id-ID")}</span></div>
+          <div className="mt-4 space-y-4">{rows.map((row) => <article key={row.id} className="rounded-2xl border border-[#d9e5e4] bg-white p-5">
+            <div className="flex flex-wrap justify-between gap-2 text-sm text-[#1b6570]"><span>{names[row.requester_id] || "Anggota"} · {row.request_type === "pengadaan" ? "Pengadaan" : "Peminjaman"}</span><span>{new Date(row.created_at).toLocaleString("id-ID")}</span></div>
             <h2 className="mt-2 text-lg font-semibold">{row.item_name} · {row.quantity}</h2>
-            {row.reason && <p className="mt-1 text-sm text-[#58685e]">Alasan: {row.reason}</p>}
+            {row.reason && <p className="mt-1 text-sm text-[#4d6674]">Alasan: {row.reason}</p>}
             <div className="mt-5 grid gap-3 sm:grid-cols-[220px_1fr_auto] sm:items-end">
               <label className="block text-sm font-medium">Status
-                <select value={draftStatus[row.id] || row.status} onChange={(e) => setDraftStatus((prev) => ({ ...prev, [row.id]: e.target.value }))} className="mt-2 w-full rounded-xl border border-[#cdd9ce] bg-white px-3 py-2.5">
+                <select value={draftStatus[row.id] || row.status} onChange={(e) => setDraftStatus((prev) => ({ ...prev, [row.id]: e.target.value }))} className="mt-2 w-full rounded-xl border border-[#bfced2] bg-white px-3 py-2.5">
                   {statuses.map(([key, label]) => <option key={key} value={key}>{label}</option>)}
                 </select>
               </label>
               <label className="block text-sm font-medium">Catatan untuk anggota
-                <input value={draftNote[row.id] ?? ""} onChange={(e) => setDraftNote((prev) => ({ ...prev, [row.id]: e.target.value }))} className="mt-2 w-full rounded-xl border border-[#cdd9ce] px-3 py-2.5" />
+                <input value={draftNote[row.id] ?? ""} onChange={(e) => setDraftNote((prev) => ({ ...prev, [row.id]: e.target.value }))} className="mt-2 w-full rounded-xl border border-[#bfced2] px-3 py-2.5" />
               </label>
-              <button disabled={Boolean(busyId)} onClick={() => save(row)} className="rounded-xl bg-[#24583c] px-5 py-2.5 font-semibold text-white disabled:opacity-50">{busyId === row.id ? "Menyimpan..." : "Simpan"}</button>
+              <button disabled={Boolean(busyId)} onClick={() => save(row)} className="rounded-xl bg-[#082b48] px-5 py-2.5 font-semibold text-white disabled:opacity-50">{busyId === row.id ? "Menyimpan..." : "Simpan"}</button>
             </div>
           </article>)}</div>
         </>}

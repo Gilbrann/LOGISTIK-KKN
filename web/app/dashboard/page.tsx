@@ -83,41 +83,43 @@ export default function DashboardPage() {
   }
 
   return (
-    <main className="min-h-screen bg-[#f7f8f6] text-[#1d2924]">
-      <header className="border-b border-[#dfe6df] bg-white">
+    <main className="min-h-screen bg-[#f3f7f6] text-[#09283f]">
+      <header className="border-b-4 border-[#b9d965] bg-gradient-to-r from-[#082b48] via-[#164e68] to-[#28747b] text-white">
         <div className="mx-auto flex max-w-5xl items-center justify-between gap-3 px-5 py-4">
           <Link href="/" className="font-bold">Logistik KKN</Link>
-          <button onClick={logout} className="text-sm font-medium text-[#24583c] underline">Keluar</button>
+          <button onClick={logout} className="text-sm font-medium text-[#d9efa7] underline">Keluar</button>
         </div>
       </header>
       <div className="mx-auto max-w-5xl px-5 py-10">
         {loading && <p>Memuat data...</p>}
         {errorMessage && <p role="alert" className="mb-5 rounded-xl bg-red-50 p-4 text-sm text-red-700">{errorMessage}</p>}
         {profile && <>
-          <p className="text-sm font-semibold uppercase tracking-widest text-[#477558]">Checklist pribadi · {profile.role}</p>
-          <h1 className="mt-2 text-3xl font-bold">Halo, {profile.full_name}</h1>
-          <p className="mt-3 text-[#58685e]">{ready} dari {items.length} barang siap dibawa. Pilihanmu tersimpan untuk akunmu.</p>
-          <div className="mt-6 flex flex-wrap gap-3">
-            <Link href="/inventaris" className="rounded-xl border border-[#cdd9ce] bg-white px-4 py-2 text-sm font-medium">Lihat daftar barang kelompok</Link>
-            <Link href="/pengajuan" className="rounded-xl border border-[#cdd9ce] bg-white px-4 py-2 text-sm font-medium">Ajukan barang</Link>
+          <div className="rounded-2xl border border-[#d9e5e4] border-l-4 border-l-[#b9d965] bg-white/90 p-6 shadow-sm">
+            <p className="text-sm font-semibold uppercase tracking-widest text-[#1b6570]">Checklist pribadi · {profile.role}</p>
+            <h1 className="mt-2 text-3xl font-bold">Halo, {profile.full_name}</h1>
+            <p className="mt-3 text-[#4d6674]">{ready} dari {items.length} barang siap dibawa. Pilihanmu tersimpan untuk akunmu.</p>
+            <div className="mt-6 flex flex-wrap gap-3">
+            <Link href="/inventaris" className="rounded-xl border border-[#bfced2] bg-white px-4 py-2 text-sm font-medium">Lihat daftar barang kelompok</Link>
+            <Link href="/pengajuan" className="rounded-xl border border-[#bfced2] bg-white px-4 py-2 text-sm font-medium">Ajukan barang</Link>
             {(profile.role === "perkap" || profile.role === "admin") && <>
-              <Link href="/perkap" className="rounded-xl border border-[#cdd9ce] bg-white px-4 py-2 text-sm font-medium">Kelola barang kelompok</Link>
-              <Link href="/perkap/barang-pribadi" className="rounded-xl border border-[#cdd9ce] bg-white px-4 py-2 text-sm font-medium">Kelola daftar pribadi</Link>
-              <Link href="/perkap/pengajuan" className="rounded-xl border border-[#cdd9ce] bg-white px-4 py-2 text-sm font-medium">Proses pengajuan</Link>
+              <Link href="/perkap" className="rounded-xl border border-[#bfced2] bg-white px-4 py-2 text-sm font-medium">Kelola barang kelompok</Link>
+              <Link href="/perkap/barang-pribadi" className="rounded-xl border border-[#bfced2] bg-white px-4 py-2 text-sm font-medium">Kelola daftar pribadi</Link>
+              <Link href="/perkap/pengajuan" className="rounded-xl border border-[#bfced2] bg-white px-4 py-2 text-sm font-medium">Proses pengajuan</Link>
             </>}
-            {profile.role === "admin" && <Link href="/admin/checklist" className="rounded-xl border border-[#cdd9ce] bg-white px-4 py-2 text-sm font-medium">Pantau checklist anggota</Link>}
+            {profile.role === "admin" && <Link href="/admin/checklist" className="rounded-xl border border-[#bfced2] bg-white px-4 py-2 text-sm font-medium">Pantau checklist anggota</Link>}
+            </div>
           </div>
           <label className="mt-8 block text-sm font-medium">Cari barang
-            <input value={search} onChange={(e) => setSearch(e.target.value)} placeholder="Cari nama atau kategori" className="mt-2 w-full rounded-xl border border-[#cdd9ce] bg-white px-4 py-3" />
+            <input value={search} onChange={(e) => setSearch(e.target.value)} placeholder="Cari nama atau kategori" className="mt-2 w-full rounded-xl border border-[#bfced2] bg-white px-4 py-3" />
           </label>
-          {items.length === 0 && <p className="mt-5 text-sm text-[#58685e]">Belum ada barang di katalog. Periksa apakah seed.sql berhasil dijalankan.</p>}
+          {items.length === 0 && <p className="mt-5 text-sm text-[#4d6674]">Belum ada barang di katalog. Periksa apakah seed.sql berhasil dijalankan.</p>}
           <div className="mt-5 grid gap-3 sm:grid-cols-2">
-            {shown.map((item) => <article key={item.id} className="rounded-2xl border border-[#dfe6df] bg-white p-5">
-              <div className="flex justify-between gap-3 text-xs text-[#477558]"><span>{item.category}</span><span>{item.id}</span></div>
+            {shown.map((item) => <article key={item.id} className="rounded-2xl border border-[#d9e5e4] bg-white p-5">
+              <div className="flex justify-between gap-3 text-xs text-[#1b6570]"><span>{item.category}</span><span>{item.id}</span></div>
               <h2 className="mt-2 font-semibold">{item.name}</h2>
-              {item.note && <p className="mt-1 text-sm text-[#58685e]">{item.note}</p>}
+              {item.note && <p className="mt-1 text-sm text-[#4d6674]">{item.note}</p>}
               <label className="mt-4 block text-sm">Status
-                <select value={statuses[item.id] || "belum_dicek"} disabled={Boolean(saving)} onChange={(e) => changeStatus(item.id, e.target.value as Status)} className="mt-2 w-full rounded-xl border border-[#cdd9ce] bg-white px-3 py-2.5 disabled:opacity-60">
+                <select value={statuses[item.id] || "belum_dicek"} disabled={Boolean(saving)} onChange={(e) => changeStatus(item.id, e.target.value as Status)} className="mt-2 w-full rounded-xl border border-[#bfced2] bg-white px-3 py-2.5 disabled:opacity-60">
                   {choices.map((choice) => <option key={choice.value} value={choice.value}>{choice.label}</option>)}
                 </select>
               </label>

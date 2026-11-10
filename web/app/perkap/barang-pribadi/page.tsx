@@ -104,43 +104,43 @@ export default function BarangPribadiPerkapPage() {
   }
 
   return (
-    <main className="min-h-screen bg-[#f7f8f6] px-5 py-10 text-[#1d2924]">
+    <main className="min-h-screen bg-[#f3f7f6] px-5 py-10 text-[#09283f]">
       <div className="mx-auto max-w-4xl">
-        <Link href="/perkap" className="text-sm text-[#24583c]">← Barang kelompok</Link>
+        <Link href="/perkap" className="text-sm text-[#082b48]">← Barang kelompok</Link>
         <h1 className="mt-6 text-3xl font-bold">Daftar barang pribadi</h1>
-        <p className="mt-2 text-[#58685e]">Perubahan di sini berlaku untuk checklist semua anggota. Status barang tiap anggota tetap milik akunnya masing-masing.</p>
+        <p className="mt-2 text-[#4d6674]">Perubahan di sini berlaku untuk checklist semua anggota. Status barang tiap anggota tetap milik akunnya masing-masing.</p>
         {loading && <p className="mt-6">Memuat barang...</p>}
-        {message && <p role="status" className="mt-5 rounded-xl border border-[#dfe6df] bg-white p-4 text-sm">{message}</p>}
+        {message && <p role="status" className="mt-5 rounded-xl border border-[#d9e5e4] bg-white p-4 text-sm">{message}</p>}
         {allowed && !loading && <>
           <div className="mt-7 flex flex-wrap gap-3">
-            <input aria-label="Cari barang" value={search} onChange={(e) => setSearch(e.target.value)} placeholder="Cari barang atau kategori" className="min-w-0 flex-1 rounded-xl border border-[#cdd9ce] bg-white px-4 py-3" />
-            <button onClick={add} className="rounded-xl bg-[#24583c] px-5 py-3 font-semibold text-white">+ Tambah barang pribadi</button>
+            <input aria-label="Cari barang" value={search} onChange={(e) => setSearch(e.target.value)} placeholder="Cari barang atau kategori" className="min-w-0 flex-1 rounded-xl border border-[#bfced2] bg-white px-4 py-3" />
+            <button onClick={add} className="rounded-xl bg-[#082b48] px-5 py-3 font-semibold text-white">+ Tambah barang pribadi</button>
           </div>
-          {editing && <form onSubmit={save} className="mt-5 space-y-4 rounded-2xl border border-[#dfe6df] bg-white p-5">
+          {editing && <form onSubmit={save} className="mt-5 space-y-4 rounded-2xl border border-[#d9e5e4] bg-white p-5">
             <h2 className="text-lg font-bold">{editing === "new" ? "Tambah barang pribadi" : "Ubah barang pribadi"}</h2>
             <div className="grid gap-4 sm:grid-cols-2">
               <label className="block text-sm font-medium">Kategori
-                <input required value={draft.category} onChange={(e) => setDraft((prev) => ({ ...prev, category: e.target.value }))} className="mt-2 w-full rounded-xl border border-[#cdd9ce] px-4 py-3" />
+                <input required value={draft.category} onChange={(e) => setDraft((prev) => ({ ...prev, category: e.target.value }))} className="mt-2 w-full rounded-xl border border-[#bfced2] px-4 py-3" />
               </label>
               <label className="block text-sm font-medium">Nama barang
-                <input required value={draft.name} onChange={(e) => setDraft((prev) => ({ ...prev, name: e.target.value }))} className="mt-2 w-full rounded-xl border border-[#cdd9ce] px-4 py-3" />
+                <input required value={draft.name} onChange={(e) => setDraft((prev) => ({ ...prev, name: e.target.value }))} className="mt-2 w-full rounded-xl border border-[#bfced2] px-4 py-3" />
               </label>
             </div>
             <label className="block text-sm font-medium">Catatan (opsional)
-              <input value={draft.note} onChange={(e) => setDraft((prev) => ({ ...prev, note: e.target.value }))} className="mt-2 w-full rounded-xl border border-[#cdd9ce] px-4 py-3" />
+              <input value={draft.note} onChange={(e) => setDraft((prev) => ({ ...prev, note: e.target.value }))} className="mt-2 w-full rounded-xl border border-[#bfced2] px-4 py-3" />
             </label>
             <div className="flex gap-3">
-              <button disabled={busy} className="rounded-xl bg-[#24583c] px-5 py-2.5 font-semibold text-white disabled:opacity-50">{busy ? "Menyimpan..." : "Simpan"}</button>
-              <button type="button" disabled={busy} onClick={() => setEditing(null)} className="rounded-xl border border-[#cdd9ce] px-5 py-2.5">Batal</button>
+              <button disabled={busy} className="rounded-xl bg-[#082b48] px-5 py-2.5 font-semibold text-white disabled:opacity-50">{busy ? "Menyimpan..." : "Simpan"}</button>
+              <button type="button" disabled={busy} onClick={() => setEditing(null)} className="rounded-xl border border-[#bfced2] px-5 py-2.5">Batal</button>
             </div>
           </form>}
-          <p className="mt-7 text-sm text-[#58685e]">{shown.length} dari {items.length} barang</p>
-          <div className="mt-3 grid gap-3 sm:grid-cols-2">{shown.map((item) => <article key={item.id} className="rounded-2xl border border-[#dfe6df] bg-white p-5">
-            <div className="flex justify-between gap-3 text-xs text-[#477558]"><span>{item.category}</span><span>{item.id}</span></div>
+          <p className="mt-7 text-sm text-[#4d6674]">{shown.length} dari {items.length} barang</p>
+          <div className="mt-3 grid gap-3 sm:grid-cols-2">{shown.map((item) => <article key={item.id} className="rounded-2xl border border-[#d9e5e4] bg-white p-5">
+            <div className="flex justify-between gap-3 text-xs text-[#1b6570]"><span>{item.category}</span><span>{item.id}</span></div>
             <h2 className="mt-2 font-semibold">{item.name}</h2>
-            {item.note && <p className="mt-1 text-sm text-[#58685e]">{item.note}</p>}
+            {item.note && <p className="mt-1 text-sm text-[#4d6674]">{item.note}</p>}
             <div className="mt-4 flex gap-4 text-sm font-medium">
-              <button disabled={busy} onClick={() => edit(item)} className="text-[#24583c] underline">Ubah</button>
+              <button disabled={busy} onClick={() => edit(item)} className="text-[#082b48] underline">Ubah</button>
               <button disabled={busy} onClick={() => deactivate(item)} className="text-red-700 underline">Nonaktifkan</button>
             </div>
           </article>)}</div>

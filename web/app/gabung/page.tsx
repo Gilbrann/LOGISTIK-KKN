@@ -47,19 +47,19 @@ export default function GabungPage() {
   }
 
   return (
-    <main className="min-h-screen bg-[#f7f8f6] px-5 py-12 text-[#1d2924]">
+    <main className="min-h-screen bg-[#f3f7f6] px-5 py-12 text-[#09283f]">
       <div className="mx-auto max-w-md">
         <h1 className="mt-10 text-3xl font-bold">Gabung tim KKN</h1>
-        <p className="mt-2 text-[#58685e]">Isi nama dan kode undangan dari pengurus tim.</p>
+        <p className="mt-2 text-[#4d6674]">Isi nama dan kode undangan dari pengurus tim.</p>
         {checking ? <p className="mt-6">Memeriksa akun...</p> : (
-          <form onSubmit={gabung} className="mt-7 space-y-4 rounded-2xl border border-[#dfe6df] bg-white p-6">
+          <form onSubmit={gabung} className="mt-7 space-y-4 rounded-2xl border border-[#d9e5e4] bg-white p-6">
             <label className="block text-sm font-medium">Nama lengkap
-              <input required minLength={2} maxLength={100} autoComplete="name" value={name} onChange={(e) => setName(e.target.value)} className="mt-2 w-full rounded-xl border border-[#cdd9ce] px-4 py-3" />
+              <input required minLength={2} maxLength={100} autoComplete="name" value={name} onChange={(e) => setName(e.target.value)} className="mt-2 w-full rounded-xl border border-[#bfced2] px-4 py-3" />
             </label>
             <label className="block text-sm font-medium">Kode undangan
-              <input required autoComplete="off" value={code} onChange={(e) => setCode(e.target.value)} className="mt-2 w-full rounded-xl border border-[#cdd9ce] px-4 py-3" />
+              <input required autoComplete="off" value={code} onChange={(e) => setCode(e.target.value)} className="mt-2 w-full rounded-xl border border-[#bfced2] px-4 py-3" />
             </label>
-            <button disabled={busy} className="w-full rounded-xl bg-[#24583c] px-5 py-3 font-semibold text-white disabled:opacity-50">{busy ? "Memproses..." : "Gabung"}</button>
+            <button disabled={busy} className="w-full rounded-xl bg-[#082b48] px-5 py-3 font-semibold text-white disabled:opacity-50">{busy ? "Memproses..." : "Gabung"}</button>
           </form>
         )}
         {message && <p role="alert" className="mt-4 text-sm text-red-700">{message}</p>}

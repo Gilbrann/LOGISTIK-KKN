@@ -85,40 +85,40 @@ export default function PengajuanPage() {
   }
 
   return (
-    <main className="min-h-screen bg-[#f7f8f6] px-5 py-10 text-[#1d2924]">
+    <main className="min-h-screen bg-[#f3f7f6] px-5 py-10 text-[#09283f]">
       <div className="mx-auto max-w-3xl">
-        <Link href="/dashboard" className="text-sm text-[#24583c]">← Dashboard</Link>
+        <Link href="/dashboard" className="text-sm text-[#082b48]">← Dashboard</Link>
         <h1 className="mt-6 text-3xl font-bold">Pengajuan logistik</h1>
-        <p className="mt-2 text-[#58685e]">Ajukan barang yang perlu dibeli atau dipinjam untuk kegiatan KKN.</p>
+        <p className="mt-2 text-[#4d6674]">Ajukan barang yang perlu dibeli atau dipinjam untuk kegiatan KKN.</p>
         {loading && <p className="mt-6">Memuat pengajuan...</p>}
-        {message && <p role="status" className="mt-5 rounded-xl border border-[#dfe6df] bg-white p-4 text-sm">{message}</p>}
+        {message && <p role="status" className="mt-5 rounded-xl border border-[#d9e5e4] bg-white p-4 text-sm">{message}</p>}
         {!loading && userId && <>
-          <form onSubmit={submit} className="mt-7 grid gap-4 rounded-2xl border border-[#dfe6df] bg-white p-5 sm:grid-cols-2">
+          <form onSubmit={submit} className="mt-7 grid gap-4 rounded-2xl border border-[#d9e5e4] bg-white p-5 sm:grid-cols-2">
             <label className="block text-sm font-medium">Jenis pengajuan
-              <select value={kind} onChange={(e) => setKind(e.target.value)} className="mt-2 w-full rounded-xl border border-[#cdd9ce] bg-white px-4 py-3">
+              <select value={kind} onChange={(e) => setKind(e.target.value)} className="mt-2 w-full rounded-xl border border-[#bfced2] bg-white px-4 py-3">
                 <option value="pengadaan">Pengadaan / pembelian</option>
                 <option value="peminjaman">Peminjaman</option>
               </select>
             </label>
             <label className="block text-sm font-medium">Nama barang
-              <input required minLength={2} maxLength={150} value={name} onChange={(e) => setName(e.target.value)} className="mt-2 w-full rounded-xl border border-[#cdd9ce] px-4 py-3" />
+              <input required minLength={2} maxLength={150} value={name} onChange={(e) => setName(e.target.value)} className="mt-2 w-full rounded-xl border border-[#bfced2] px-4 py-3" />
             </label>
             <label className="block text-sm font-medium">Jumlah
-              <input required type="number" min="0.01" step="any" value={quantity} onChange={(e) => setQuantity(e.target.value)} className="mt-2 w-full rounded-xl border border-[#cdd9ce] px-4 py-3" />
+              <input required type="number" min="0.01" step="any" value={quantity} onChange={(e) => setQuantity(e.target.value)} className="mt-2 w-full rounded-xl border border-[#bfced2] px-4 py-3" />
             </label>
             <label className="block text-sm font-medium">Alasan / keterangan
-              <input value={reason} onChange={(e) => setReason(e.target.value)} className="mt-2 w-full rounded-xl border border-[#cdd9ce] px-4 py-3" />
+              <input value={reason} onChange={(e) => setReason(e.target.value)} className="mt-2 w-full rounded-xl border border-[#bfced2] px-4 py-3" />
             </label>
-            <button disabled={busy} className="rounded-xl bg-[#24583c] px-5 py-3 font-semibold text-white disabled:opacity-50 sm:col-span-2">{busy ? "Mengirim..." : "Kirim pengajuan"}</button>
+            <button disabled={busy} className="rounded-xl bg-[#082b48] px-5 py-3 font-semibold text-white disabled:opacity-50 sm:col-span-2">{busy ? "Mengirim..." : "Kirim pengajuan"}</button>
           </form>
           <h2 className="mt-9 text-xl font-bold">Pengajuan saya</h2>
-          {rows.length === 0 && <p className="mt-3 text-[#58685e]">Belum ada pengajuan.</p>}
-          <div className="mt-4 space-y-3">{rows.map((row) => <article key={row.id} className="rounded-2xl border border-[#dfe6df] bg-white p-5">
-            <div className="flex flex-wrap justify-between gap-2 text-sm text-[#477558]"><span>{row.request_type === "pengadaan" ? "Pengadaan" : "Peminjaman"}</span><span>{statusLabel[row.status] || row.status}</span></div>
+          {rows.length === 0 && <p className="mt-3 text-[#4d6674]">Belum ada pengajuan.</p>}
+          <div className="mt-4 space-y-3">{rows.map((row) => <article key={row.id} className="rounded-2xl border border-[#d9e5e4] bg-white p-5">
+            <div className="flex flex-wrap justify-between gap-2 text-sm text-[#1b6570]"><span>{row.request_type === "pengadaan" ? "Pengadaan" : "Peminjaman"}</span><span>{statusLabel[row.status] || row.status}</span></div>
             <h3 className="mt-2 font-semibold">{row.item_name} · {row.quantity}</h3>
-            {row.reason && <p className="mt-1 text-sm text-[#58685e]">Alasan: {row.reason}</p>}
-            {row.staff_note && <p className="mt-1 text-sm text-[#58685e]">Catatan Perkap: {row.staff_note}</p>}
-            <p className="mt-3 text-xs text-[#718077]">{new Date(row.created_at).toLocaleString("id-ID")}</p>
+            {row.reason && <p className="mt-1 text-sm text-[#4d6674]">Alasan: {row.reason}</p>}
+            {row.staff_note && <p className="mt-1 text-sm text-[#4d6674]">Catatan Perkap: {row.staff_note}</p>}
+            <p className="mt-3 text-xs text-[#627a84]">{new Date(row.created_at).toLocaleString("id-ID")}</p>
           </article>)}</div>
         </>}
       </div>

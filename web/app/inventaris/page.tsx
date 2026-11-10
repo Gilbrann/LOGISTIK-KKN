@@ -71,18 +71,18 @@ export default function InventarisPage() {
   }
 
   return (
-    <main className="min-h-screen bg-[#f7f8f6] text-[#1d2924]">
-      <header className="border-b border-[#dfe6df] bg-white">
+    <main className="min-h-screen bg-[#f3f7f6] text-[#09283f]">
+      <header className="border-b-4 border-[#b9d965] bg-gradient-to-r from-[#082b48] via-[#164e68] to-[#28747b] text-white">
         <div className="mx-auto flex max-w-6xl items-center justify-between gap-3 px-6 py-5">
           <Link href="/" className="text-lg font-bold tracking-tight">Logistik KKN</Link>
-          <Link href="/dashboard" className="text-sm font-medium text-[#24583c] underline">Checklist saya</Link>
+          <Link href="/dashboard" className="text-sm font-medium text-[#d9efa7] underline">Checklist saya</Link>
         </div>
       </header>
 
       <div className="mx-auto max-w-6xl px-6 py-10 sm:py-14">
-        <Link href="/dashboard" className="text-sm font-medium text-[#356448]">← Dashboard</Link>
+        <Link href="/dashboard" className="text-sm font-medium text-[#165968]">← Dashboard</Link>
         <h1 className="mt-5 text-3xl font-bold tracking-tight sm:text-4xl">Daftar barang KKN</h1>
-        <p className="mt-3 max-w-2xl leading-7 text-[#58685e]">
+        <p className="mt-3 max-w-2xl leading-7 text-[#4d6674]">
           Barang kelompok dan checklist pribadi berasal dari database tim. Jumlah barang kelompok diperbarui oleh Perkap.
         </p>
         {loading && <p className="mt-6">Memuat barang...</p>}
@@ -93,41 +93,41 @@ export default function InventarisPage() {
             {(["kelompok", "pribadi"] as const).map((value) => <button
               key={value} type="button" onClick={() => choose(value)} aria-pressed={jenis === value}
               className={"rounded-full px-5 py-2.5 text-sm font-semibold " + (jenis === value
-                ? "bg-[#24583c] text-white" : "border border-[#dfe6df] bg-white hover:bg-[#edf4ed]")}
+                ? "bg-[#082b48] text-white" : "border border-[#d9e5e4] bg-white hover:bg-[#e7f2d8]")}
             >{value === "kelompok" ? "Barang kelompok" : "Barang pribadi"} <span className="ml-1 opacity-75">{value === "kelompok" ? kelompok.length : pribadi.length}</span></button>)}
           </div>
 
           <div className="mt-6 grid gap-3 sm:grid-cols-[1fr_250px]">
             <label className="block text-sm font-medium">Cari barang
-              <input value={search} onChange={(e) => setSearch(e.target.value)} placeholder="Contoh: selotip" className="mt-2 w-full rounded-xl border border-[#cdd9ce] bg-white px-4 py-3" />
+              <input value={search} onChange={(e) => setSearch(e.target.value)} placeholder="Contoh: selotip" className="mt-2 w-full rounded-xl border border-[#bfced2] bg-white px-4 py-3" />
             </label>
             <label className="block text-sm font-medium">Kategori
-              <select value={category} onChange={(e) => setCategory(e.target.value)} className="mt-2 w-full rounded-xl border border-[#cdd9ce] bg-white px-4 py-3">
+              <select value={category} onChange={(e) => setCategory(e.target.value)} className="mt-2 w-full rounded-xl border border-[#bfced2] bg-white px-4 py-3">
                 <option value="">Semua kategori</option>
                 {categories.map((value) => <option key={value} value={value}>{value}</option>)}
               </select>
             </label>
           </div>
 
-          <p className="mt-6 text-sm text-[#58685e]">Menampilkan {shown.length} dari {data.length} barang</p>
+          <p className="mt-6 text-sm text-[#4d6674]">Menampilkan {shown.length} dari {data.length} barang</p>
           <div className="mt-3 grid gap-3 md:grid-cols-2 lg:grid-cols-3">
-            {jenis === "kelompok" ? (shown as GroupItem[]).map((item) => <article key={item.id} className="rounded-2xl border border-[#dfe6df] bg-white p-5">
-              <div className="flex justify-between gap-3 text-xs text-[#477558]"><span>{item.category}</span><span>{item.id}</span></div>
+            {jenis === "kelompok" ? (shown as GroupItem[]).map((item) => <article key={item.id} className="rounded-2xl border border-[#d9e5e4] bg-white p-5">
+              <div className="flex justify-between gap-3 text-xs text-[#1b6570]"><span>{item.category}</span><span>{item.id}</span></div>
               <h2 className="mt-4 text-lg font-semibold">{item.name}</h2>
-              {item.note && <p className="mt-2 text-sm text-[#58685e]">{item.note}</p>}
-              <div className="mt-5 border-t border-[#edf0eb] pt-3 text-sm">
+              {item.note && <p className="mt-2 text-sm text-[#4d6674]">{item.note}</p>}
+              <div className="mt-5 border-t border-[#e7efeb] pt-3 text-sm">
                 <p>Butuh: {item.needed_qty ?? "Belum diisi"} {item.unit ?? ""}</p>
                 <p>Tersedia: {item.available_qty ?? "Belum diisi"} {item.unit ?? ""}</p>
-                {item.responsible_person && <p className="mt-1 text-[#58685e]">Penanggung jawab: {item.responsible_person}</p>}
+                {item.responsible_person && <p className="mt-1 text-[#4d6674]">Penanggung jawab: {item.responsible_person}</p>}
               </div>
-            </article>) : (shown as PersonalItem[]).map((item) => <article key={item.id} className="rounded-2xl border border-[#dfe6df] bg-white p-5">
-              <div className="flex justify-between gap-3 text-xs text-[#477558]"><span>{item.category}</span><span>{item.id}</span></div>
+            </article>) : (shown as PersonalItem[]).map((item) => <article key={item.id} className="rounded-2xl border border-[#d9e5e4] bg-white p-5">
+              <div className="flex justify-between gap-3 text-xs text-[#1b6570]"><span>{item.category}</span><span>{item.id}</span></div>
               <h2 className="mt-4 text-lg font-semibold">{item.name}</h2>
-              {item.note && <p className="mt-2 text-sm text-[#58685e]">{item.note}</p>}
-              <Link href="/dashboard" className="mt-5 inline-block text-sm font-medium text-[#24583c] underline">Atur status di checklist saya</Link>
+              {item.note && <p className="mt-2 text-sm text-[#4d6674]">{item.note}</p>}
+              <Link href="/dashboard" className="mt-5 inline-block text-sm font-medium text-[#082b48] underline">Atur status di checklist saya</Link>
             </article>)}
           </div>
-          {shown.length === 0 && <p className="mt-4 rounded-xl border border-[#dfe6df] bg-white p-8 text-center text-[#58685e]">Tidak ada barang yang cocok.</p>}
+          {shown.length === 0 && <p className="mt-4 rounded-xl border border-[#d9e5e4] bg-white p-8 text-center text-[#4d6674]">Tidak ada barang yang cocok.</p>}
         </>}
       </div>
     </main>

@@ -20,5 +20,5 @@ export default function Home() {
     return () => { mounted = false; };
   }, [router]);
 
-  return <main className="flex min-h-screen items-center justify-center bg-[#f7f8f6] text-[#58685e]">Membuka Logistik KKN...</main>;
+  return <main className="flex min-h-screen items-center justify-center bg-[#f3f7f6] text-[#4d6674]">Membuka Logistik KKN...</main>;
 }
