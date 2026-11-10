@@ -44,6 +44,7 @@ export default function LoginPage() {
             <input required type="password" autoComplete="current-password" value={password} onChange={(e) => setPassword(e.target.value)} className="mt-2 w-full rounded-xl border border-[#bfced2] px-4 py-3" />
           </label>
           <button disabled={busy} className="w-full rounded-xl bg-[#082b48] px-5 py-3 font-semibold text-white disabled:opacity-50">{busy ? "Memproses..." : "Masuk"}</button>
+          <p className="text-right text-sm"><Link href="/lupa-password" className="font-medium text-[#165968] underline">Lupa password?</Link></p>
           {message && <p role="alert" className="text-sm text-red-700">{message}</p>}
         </form>
         <p className="mt-5 text-sm">Belum punya akun? <Link href="/daftar" className="font-semibold text-[#082b48] underline">Daftar</Link></p>
